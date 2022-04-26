@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'debug'
 
 DRINKS = [
   { name: 'コーヒー', price: '300' },
@@ -15,6 +16,7 @@ FOODS = [
 ].freeze
 
 def take_order(menus)
+  binding.break
   menus.each.with_index(1) do |menu, i|
     puts "(#{i})#{menu[:name]}: #{menu[:price]}円"
   end
